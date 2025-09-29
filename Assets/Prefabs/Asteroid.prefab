@@ -82,7 +82,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -7097594788527198317, guid: 7f24fbfa528310d4594daaa8c0c21705, type: 3}
+  m_Sprite: {fileID: 7331315201791160908, guid: 5ef5c1437c09f77489baf787f7281718, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -158,7 +158,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.22, y: 1.22}
+    oldSize: {x: 0.72, y: 0.66}
     newSize: {x: 1.22, y: 1.22}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -179,10 +179,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Asteroid
   sprites:
-  - {fileID: -7097594788527198317, guid: 7f24fbfa528310d4594daaa8c0c21705, type: 3}
-  - {fileID: -6613794951689082208, guid: c69078a04c82d98409c526244def0a7e, type: 3}
-  - {fileID: 40701928262675801, guid: aadc801ec3484cf409bac2616d7f9fd6, type: 3}
-  - {fileID: -1337382102042332801, guid: b7909efed60520f42b7f8274559cc6ef, type: 3}
+  - {fileID: 7331315201791160908, guid: 5ef5c1437c09f77489baf787f7281718, type: 3}
+  - {fileID: 8476764939301271271, guid: 06cc3687b53d5be48944dcf7cc02bcf3, type: 3}
+  - {fileID: -1027316089336844762, guid: 0624a278fdb8db54c9e7d4ca26549492, type: 3}
+  - {fileID: 6259665926663907396, guid: 24560479aced72246892c955b119fded, type: 3}
   size: 1
   minSize: 0.35
   maxSize: 1.5

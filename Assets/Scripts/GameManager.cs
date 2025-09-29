@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using UnityEngine.Rendering;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
@@ -20,6 +19,7 @@ public class GameManager : MonoBehaviour
     public GameObject GameManual;
     public Text highScoreText;
     public GameObject memberTeam;
+    public GameObject logo;
 
     public AudioSource themeMusic;
     public AudioSource destroyAsteroidMusic;
@@ -122,7 +122,7 @@ public class GameManager : MonoBehaviour
             NukeAllAsteroids();
         }
 
-        if (isGameStarted && Input.GetKey(KeyCode.LeftControl) && Input.GetKey(KeyCode.LeftShift) && Input.GetKeyDown(KeyCode.D))
+        if (Input.GetKey(KeyCode.LeftControl) && Input.GetKey(KeyCode.LeftShift) && Input.GetKeyDown(KeyCode.D))
         {
             lives = 1;
 
@@ -248,6 +248,9 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1f; // chạy game bình thường
         elapsedTime = 0f; // reset time
 
+        if (logo != null)
+            logo.SetActive(false);
+
         if (scoreText != null) scoreText.gameObject.SetActive(true);
         if (livesText != null) livesText.gameObject.SetActive(true);
         if (timeGame != null) timeGame.gameObject.SetActive(true);
@@ -342,6 +345,40 @@ public class GameManager : MonoBehaviour
             AsteroidDestroyed(a); // cộng điểm
             Destroy(a.gameObject); // xóa thiên thạch
         }
+    }
+    public void BackToMainScreen()
+    {
+        Time.timeScale = 0f;
+
+        isGameStarted = false;
+        elapsedTime = 0f;
+        score = 0;
+        lives = 3;
+        lastCheckpoint = 0;
+
+        if (scoreText != null) scoreText.gameObject.SetActive(false);
+        if (livesText != null) livesText.gameObject.SetActive(false);
+        if (timeGame != null) timeGame.gameObject.SetActive(false);
+        if (highScoreText != null) highScoreText.gameObject.SetActive(false);
+        if (gameOverUI != null) gameOverUI.SetActive(false);
+
+        if (gameStartUI != null) gameStartUI.SetActive(true);
+        if (GameManual != null) GameManual.SetActive(true);
+        if (memberTeam != null) memberTeam.SetActive(true);
+        if (logo != null) logo.SetActive(true);
+
+        Asteroid[] asteroids = FindObjectsByType<Asteroid>(FindObjectsSortMode.None);
+        for (int i = 0; i < asteroids.Length; i++)
+        {
+            Destroy(asteroids[i].gameObject);
+        }
+        if (player != null)
+        {
+            player.gameObject.SetActive(true);
+            player.transform.position = Vector3.zero;
+            player.transform.rotation = Quaternion.identity;
+        }
+        UpdateUI();
     }
 
 }
