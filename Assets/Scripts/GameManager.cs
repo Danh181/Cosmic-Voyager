@@ -122,7 +122,7 @@ public class GameManager : MonoBehaviour
             NukeAllAsteroids();
         }
 
-        if (isGameStarted && Input.GetKey(KeyCode.LeftControl) && Input.GetKey(KeyCode.LeftShift) && Input.GetKeyDown(KeyCode.D))
+        if (isGameStarted && Input.GetKey(KeyCode.LeftShift) && Input.GetKeyDown(KeyCode.D))
         {
             lives = 1;
 
