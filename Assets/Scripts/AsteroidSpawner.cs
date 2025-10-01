@@ -2,9 +2,9 @@
 
 public class AsteroidSpawner : MonoBehaviour
 {
-    public float baseSpawnRate = 2.0f;      // spawn ban đầu
+    public float baseSpawnRate = 5.0f;      // spawn ban đầu
     public int baseSpawnAmount = 2;          // số thiên thạch ban đầu
-    public float minSpawnRate = 1.0f;        // spawnRate thấp nhất
+    public float minSpawnRate = 2.0f;        // spawnRate thấp nhất
     public int maxSpawnAmount = 10;          // số thiên thạch cao nhất
 
 
@@ -30,10 +30,10 @@ public class AsteroidSpawner : MonoBehaviour
         float timeAlive = gameManager.ElapsedTime;
 
         // giảm spawnRate dần: mỗi 20s giảm 1s nhưng không nhỏ hơn minSpawnRate
-        currentSpawnRate = Mathf.Max(minSpawnRate, baseSpawnRate - timeAlive / 20f);
+        currentSpawnRate = Mathf.Max(minSpawnRate, baseSpawnRate - timeAlive / 40f);
 
         // tăng số lượng thiên thạch: mỗi 20s +1 không quá maxSpawnAmount
-        int spawnAmount = Mathf.Min(maxSpawnAmount, baseSpawnAmount + Mathf.FloorToInt(timeAlive / 20f));
+        int spawnAmount = Mathf.Min(maxSpawnAmount, baseSpawnAmount + Mathf.FloorToInt(timeAlive / 40f));
 
         // đếm ngược spawn
         spawnTimer -= Time.deltaTime;

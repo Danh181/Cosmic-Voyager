@@ -6935,7 +6935,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript
   bulletPrefab: {fileID: 7821898837559439528, guid: 0a43302ab184fc04ebe052d24dae250b, type: 3}
   thrustSpeed: 1
-  turnSpeed: 0.02
+  turnSpeed: 0.1
 --- !u!61 &767311839
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6980,7 +6980,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.64, y: 0.64}
+  m_Size: {x: 2.56, y: 2.56}
   m_EdgeRadius: 0
 --- !u!50 &767311840
 Rigidbody2D:
@@ -7915,9 +7915,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4e5a48399f00374486f9777c43ed9f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AsteroidSpawner
-  baseSpawnRate: 2
+  baseSpawnRate: 5
   baseSpawnAmount: 2
-  minSpawnRate: 1
+  minSpawnRate: 2
   maxSpawnAmount: 10
   asteroidPrefab: {fileID: 7318586296061700542, guid: 53735ace0eae3fe438c1bbab7d3caa59, type: 3}
   spawnDistance: 15

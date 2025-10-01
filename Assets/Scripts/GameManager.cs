@@ -265,10 +265,20 @@ public class GameManager : MonoBehaviour
         if (logo != null)
             logo.SetActive(false);
 
-        if (scoreText != null) scoreText.gameObject.SetActive(true);
-        if (livesText != null) livesText.gameObject.SetActive(true);
-        if (timeGame != null) timeGame.gameObject.SetActive(true);
-        if (highScoreText != null) highScoreText.gameObject.SetActive(true);
+        if (leaderboardPanel != null) 
+            leaderboardPanel.SetActive(false);
+
+        if (scoreText != null) 
+            scoreText.gameObject.SetActive(true);
+
+        if (livesText != null) 
+            livesText.gameObject.SetActive(true);
+
+        if (timeGame != null) 
+            timeGame.gameObject.SetActive(true);
+
+        if (highScoreText != null) 
+            highScoreText.gameObject.SetActive(true);
     }
 
 
