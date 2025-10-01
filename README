@@ -1,28 +1,58 @@
-Cosmic-Voyager
+# Cosmic Voyager 🚀
 
-Group 3 Team Member:
-SE184453 - Đặng Thành Danh
-SE184458 - Phạm Quốc Thái
-SE184438 - Dương Minh Nhật
-SE184359 - Trần Lê Nhật Viễn
-SE184432 - Lê Hoàng VIệt
-QE180078 - Huỳnh Hữu Toàn
+A 2D space shooter game developed by **Group 3** as part of our coursework project.  
+The game challenges players to control a spaceship, dodge asteroids, and score as high as possible.
 
-Video Support
-https://www.youtube.com/watch?v=cIeWhztKyAg
+---
 
-Game Manual:
-W/↑ :  Up
-S/↓ : Down
-A/← : Left
-D/→ : Right
-Space: shoot
-M: rapid Fire Mode
-T: Pause musuc
-P: Pause game
+## 🎮 Team Members
+- **SE184453** - Đặng Thành Danh  
+- **SE184458** - Phạm Quốc Thái  
+- **SE184438** - Dương Minh Nhật  
+- **SE184359** - Trần Lê Nhật Viễn  
+- **SE184432** - Lê Hoàng Việt  
+- **QE180078** - Huỳnh Hữu Toàn  
 
-Cheat key:
-Auto fire: LeftShift + B
-Immortal: LeftCtrl + LeftShift + I
-Destroy all asteroid: LeftCtrl + LeftShift + E
-Kill Player: LeftCtrl + LeftShift + D
+---
+
+## 📺 Video Demo
+👉 [Watch on YouTube](https://www.youtube.com/watch?v=cIeWhztKyAg)
+
+---
+
+## 📖 Game Manual
+
+### 🔹 Controls
+- **W / ↑** : Move Up  
+- **S / ↓** : Move Down  
+- **A / ←** : Move Left  
+- **D / →** : Move Right  
+- **Space** : Shoot  
+- **M** : Rapid Fire Mode  
+- **T** : Toggle Music On/Off  
+- **P** : Pause Game  
+
+---
+
+### 🔹 Cheat Keys
+- **LeftShift + B** : Auto Fire  
+- **LeftCtrl + LeftShift + I** : Immortal Mode  
+- **LeftCtrl + LeftShift + E** : Destroy All Asteroids  
+- **LeftCtrl + LeftShift + D** : Kill Player  
+
+---
+
+## 🛠 Features
+- Classic **arcade-style space shooter** gameplay.  
+- **Score system** with top 5 leaderboard.  
+- **Pause menu** with music toggle and leaderboard access.  
+- **Cheat codes** for testing and fun.  
+- **Player respawn system** with limited lives.  
+
+---
+
+## 📌 Notes
+- Game built with **Unity Engine**.  
+- For best experience, play in **fullscreen mode**.  
+
+---
