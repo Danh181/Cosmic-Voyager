@@ -20,6 +20,7 @@ public class GameManager : MonoBehaviour
     public Text highScoreText;
     public GameObject memberTeam;
     public GameObject logo;
+    public GameObject pauseMenuUI;
 
     public AudioSource themeMusic;
     public AudioSource destroyAsteroidMusic;
@@ -42,6 +43,7 @@ public class GameManager : MonoBehaviour
         gameOverUI.SetActive(false);
         GameManual.SetActive(true);
         memberTeam.SetActive(true);
+        pauseMenuUI.SetActive(false);
 
         if (leaderboardPanel != null)
             leaderboardPanel.SetActive(false);
@@ -96,6 +98,8 @@ public class GameManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.P)) // phím P để pause/unpause game
         {
             TriggerPause();
+            ShowLeaderboard();
+            HideLeaderboard();
         }
 
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -144,12 +148,22 @@ public class GameManager : MonoBehaviour
             Time.timeScale = 0f; // dừng tất cả vật lý, Update, FixedUpdate
             if (themeMusic != null)
                 themeMusic.Pause();
+
+            if (pauseMenuUI != null)
+            {
+                pauseMenuUI.SetActive(true);
+            }
         }
         else
         {
             Time.timeScale = 1f; // chạy lại bình thường
             if (themeMusic != null && !themeMusic.isPlaying)
                 themeMusic.Play();
+
+            if (pauseMenuUI != null)
+            {
+                pauseMenuUI.SetActive(false);
+            }
         }
     }
 
@@ -361,6 +375,7 @@ public class GameManager : MonoBehaviour
         if (timeGame != null) timeGame.gameObject.SetActive(false);
         if (highScoreText != null) highScoreText.gameObject.SetActive(false);
         if (gameOverUI != null) gameOverUI.SetActive(false);
+        if (pauseMenuUI != null) pauseMenuUI.SetActive(false);
 
         if (gameStartUI != null) gameStartUI.SetActive(true);
         if (GameManual != null) GameManual.SetActive(true);
@@ -378,7 +393,12 @@ public class GameManager : MonoBehaviour
             player.transform.position = Vector3.zero;
             player.transform.rotation = Quaternion.identity;
         }
+
+        if (themeMusic != null)
+        {
+            themeMusic.Stop();
+            themeMusic.Play();
+        }
         UpdateUI();
     }
-
 }
