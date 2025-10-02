@@ -47,7 +47,8 @@ The game challenges players to control a spaceship, dodge asteroids, and score a
 - **Score system** with top 5 leaderboard.  
 - **Pause menu** with music toggle and leaderboard access.  
 - **Cheat codes** for testing and fun.  
-- **Player respawn system** with limited lives.  
+- **Player respawn system** with limited lives.
+- **For every 1k points gained, the player will regain 1 life (if the player has lost a life before).
 
 ---
 
